@@ -1,0 +1,136 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p { margin: 0; }
+
+body {
+  background: url('./img/background.png') no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+.section,
+.section__main { display: flex; }
+
+.section {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: inherit;
+}
+
+.section__main { margin-bottom: 10px; }
+
+.section__block {
+  width: 160px;
+  height: 249px;
+  background-color: transparent;
+  margin-right: 15px;
+  perspective: 1000px;
+}
+
+.section__inner {
+  position: relative;
+  height: 100%;
+  transition: transform .6s;
+}
+
+.section__front, .section__back {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.section__back {
+  transform: rotateY(180deg);
+  background: url('./img/end.png');
+  background-size: contain;
+}
+
+.section__card { max-width: 162px; }
+
+.section__hover:hover {
+  transform: translateY(-8px) rotate(-3deg) skewY(-2deg) skewX(-2deg);
+  -moz-transition: .2s linear;
+  -o-transition: .2s linear;
+  -webkit-transition: .2s linear;
+  border-radius: 7px;
+  box-shadow: 8px 8px rgba(0,0,0,.2);
+}
+
+.active .section__front { transform: rotateY(180deg); }
+.active .section__back { transform: rotateY(360deg); }
+
+.section__menu {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  min-width: 60px;
+  min-height: 30px;
+  border-radius: 8px;
+  border: 0;
+}
+
+.section__menu:hover {
+  cursor: pointer;
+  top: 13px;
+}
+
+.section__menu:active,
+.section__menu:focus { outline: none; }
+
+/* Desktop */
+@media (max-width: 1100px) {
+  .section__block  {
+    width: 130px;
+    height: 205px;
+  }
+
+  .section__card { max-width: 130px; }
+}
+
+/* Планшет */
+@media (max-width: 768px) {
+  .section__block  {
+    width: 110px;
+    height: 170px;
+  }
+
+  .section__card { max-width: 110px; }
+}
+
+@media (max-width: 650px) {
+  .section__block  {
+    width: 90px;
+    height: 140px;
+  }
+
+  .section__card { max-width: 90px; }
+}
+
+@media (max-width: 550px) {
+  .section__block  {
+    width: 75px;
+    height: 117px;
+    margin-right: 7px;
+  }
+
+  .section__card { max-width: 75px; }
+}
+
+/* Телефон */
+@media (max-width: 450px) {
+  .section__block  {
+    width: 58px;
+    height: 91px;
+    margin-right: 5px;
+  }
+
+  .section__card { max-width: 60px; }
+}

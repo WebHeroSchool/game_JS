@@ -1,0 +1,70 @@
+body { font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif; }
+
+.section__title {
+  font-size: 53px;
+  font-weight: bold;
+}
+
+.section__subtitle {
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.section__level {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.section__button {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.active { font-size: 36px; }
+
+@media (max-width: 1100px) {
+  .section__title { font-size: 47px; }
+
+  .section__subtitle,
+  .section__button { font-size: 16px; }
+
+  .section__level { font-size: 30px; }
+}
+
+@media (max-width: 850px) {
+  .section__title { font-size: 44px; }
+
+  .section__subtitle { font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+  .section__title { font-size: 39px; }
+
+  .section__subtitle { font-size: 13.5px; }
+
+  .section__level { font-size: 27px; }
+}
+
+@media (max-width: 690px) {
+  .section__title { font-size: 37px; }
+
+  .section__level { font-size: 25px; }
+}
+
+@media (max-width: 550px) {
+  .section__title { font-size: 30px; }
+
+  .section__level { font-size: 22px; }
+
+  .section__button { font-size: 14px; }
+}
+
+@media (max-width: 500px) {
+  .section__level { font-size: 27px; }
+}
+
+@media (max-width: 350px) {
+  .section__title { font-size: 28px; }
+
+  .section__level { font-size: 23px; }
+}
